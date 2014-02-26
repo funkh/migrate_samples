@@ -1,0 +1,27 @@
+Database:
+  BackendLayout.sql:
+    priority: 90
+    bar: baz
+  Pages.sql:
+    priority: 100
+    bar: baz
+  SysTemplate.sql:
+    priority: 10
+    bar: baz
+
+TypoScript:
+  Page:
+    TSConfig.ts:
+      pageUid: 456
+
+  Template:
+    Constants:
+      Constants.ts:
+        sysTemplateUid: 123
+    Setup:
+      Setup.ts:
+        sysTemplateUid: 123
+
+ExtensionConfiguration:
+  ExtensionsConfiguration.php: # Do we need this!? Inject extConf for other extensions!?
+    extensionKey: migrate_samples

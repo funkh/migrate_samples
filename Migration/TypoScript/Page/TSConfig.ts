@@ -1,0 +1,1 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:base_config/Configuration/PageTSConfig/Client/Germany/TSConfig.ts">
