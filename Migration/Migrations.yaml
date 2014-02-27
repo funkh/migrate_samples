@@ -1,3 +1,7 @@
+#########################################
+#
+#
+
 Database:
   BackendLayout.sql:
     priority: 90
@@ -8,20 +12,38 @@ Database:
   SysTemplate.sql:
     priority: 10
     bar: baz
+  SysLanguage.sql:
+    priority: 20
+
+
+########################################
+#
+#
 
 TypoScript:
-  Page:
+  PageTsConfig:
     TSConfig.ts:
-      pageUid: 456
+      pageUid: 11
 
   Template:
     Constants:
       Constants.ts:
-        sysTemplateUid: 123
+        templateUid: 1
+        mode: append
     Setup:
       Setup.ts:
-        sysTemplateUid: 123
+        templateUid: 1
+        mode: overwrite
+    IncludeStatic:
+      "EXT:news/Configuration/TypoScript":
+        templateUid: 1
 
-ExtensionConfiguration:
-  ExtensionsConfiguration.php: # Do we need this!? Inject extConf for other extensions!?
-    extensionKey: migrate_samples
+
+
+########################################
+#
+#
+
+#ExtensionConfiguration:
+#  ExtensionsConfiguration.php: # Do we need this!? Inject extConf for other extensions!?
+#    extensionKey: migrate_samples
