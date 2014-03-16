@@ -36,7 +36,7 @@ TypoScript:
         templateUid: 1
         mode: overwrite
     IncludeStatic:
-      "EXT:news/Configuration/TypoScript":
+      "EXT:migrate_samples/Configuration/TypoScript":
         templateUid: 1
 
 
