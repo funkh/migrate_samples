@@ -21,6 +21,7 @@ Database:
 #
 
 TypoScript:
+
   PageTsConfig:
     TSConfig.ts:
       pageUid: 11
@@ -44,6 +45,10 @@ TypoScript:
 #
 #
 
-#ExtensionConfiguration:
-#  ExtensionsConfiguration.php: # Do we need this!? Inject extConf for other extensions!?
-#    extensionKey: migrate_samples
+Configuration:
+
+  ExtensionConfiguration:
+    ExtensionsConfigurationForFoobarExtension.php:
+      extensionKey: foobar
+#    ExtensionsConfigurationForFoobarExtension.txt:
+#      extensionKey: baz
