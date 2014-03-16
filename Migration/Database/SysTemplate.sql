@@ -1,2 +1,2 @@
-ALTER TABLE sys_template
-	ADD tx_migratesamples_foo varchar(255) DEFAULT '' NOT NULL;
+INSERT INTO sys_template (uid, pid, sorting, title, sitetitle) VALUES
+(99, 1, 4096, 'migrate_samples system template', 'Foo Bar Baz');

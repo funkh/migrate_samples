@@ -1,2 +1,2 @@
-ALTER TABLE sys_language
-	ADD tx_migratesamples_foo varchar(255) DEFAULT '' NOT NULL;
+INSERT INTO sys_language (uid, pid, title, flag) VALUES
+(99, 0, 'migrate_samples system language', 'europeanunion');

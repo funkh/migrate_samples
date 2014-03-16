@@ -1,2 +1,2 @@
-ALTER TABLE backend_layout
-	ADD tx_migratesamples_foo varchar(255) DEFAULT '' NOT NULL;
+INSERT INTO backend_layout (uid, pid, sorting, title, description, config, icon, tx_baseconfig_template_file) VALUES
+(99, 302, 4096, 'migrate_samples backend layout', 'Layout description...', 'backend_layout { colCount = 1 rowCount = 1 rows { 1 { columns { 1 { name = Normal colPos = 0 } } } }}', '', 'EXT:migrate_samples/Resources/Private/Templates/Grids.html');

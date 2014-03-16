@@ -1,2 +1,2 @@
-ALTER TABLE pages
-	ADD tx_migratesamples_foo varchar(255) DEFAULT '' NOT NULL;
+INSERT INTO pages (uid, pid, sorting, title) VALUES
+(999, 1, 4096, 'migrate_samples page');
