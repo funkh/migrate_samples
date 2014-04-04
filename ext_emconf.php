@@ -11,8 +11,8 @@
  ***************************************************************/
 
 $EM_CONF[$_EXTKEY] = array(
-	'title' => 'migrate samples',
-	'description' => '',
+	'title' => 'Migrate samples',
+	'description' => 'Migration samples for migrate extension',
 	'category' => 'plugin',
 	'author' => 'Helge Funk',
 	'author_email' => 'helge.funk@e-net.info',
@@ -27,13 +27,13 @@ $EM_CONF[$_EXTKEY] = array(
 	'modify_tables' => '',
 	'clearCacheOnLoad' => 0,
 	'lockType' => '',
-	'version' => '0.1.0',
+	'version' => '1.0.0-dev',
 	'constraints' => array(
 		'depends' => array(
-			'extbase' => '6.0',
-			'fluid' => '6.0',
-			'typo3' => '6.0',
-            'migrate' => '0.1',
+			'extbase' => '6.2',
+			'fluid' => '6.2',
+			'typo3' => '6.2',
+			'migrate' => '1.0',
 		),
 		'conflicts' => array(
 		),

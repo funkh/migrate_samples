@@ -1,0 +1,2 @@
+# cat=basic/enable/010; type=boolean; label= Development mode: Only migrate_samples will be migrated if enabled
+developmentMode = 0

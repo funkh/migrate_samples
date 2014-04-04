@@ -1,54 +1,130 @@
-#########################################
+########################################
 #
 #
 
-Database:
-  BackendLayout.sql:
-    priority: 90
-    bar: baz
-  Pages.sql:
-    priority: 100
-    bar: baz
-  SysTemplate.sql:
-    priority: 10
-    bar: baz
-  SysLanguage.sql:
-    priority: 20
+Sql:
+  91f218da-f607-42a5-9851-bf61be968ed5:
+    dataFile: BackendLayout.sql
+  482790fe-6a23-4656-8838-4671d86874ea:
+    dataFile: Pages.sql
+  2980e154-38e0-4cf1-80c7-0cf23e685de3:
+    dataFile: SysLanguage.sql
+  2cada8d6-eea6-44ff-9b68-1c4ab1495d9e:
+    dataFile: SysTemplate.sql
 
 
 ########################################
 #
 #
 
-TypoScript:
-
-  PageTsConfig:
-    TSConfig.ts:
-      pageUid: 11
-
-  Template:
-    Constants:
-      Constants.ts:
-        templateUid: 1
-        mode: append
-    Setup:
-      Setup.ts:
-        templateUid: 1
-        mode: overwrite
-    IncludeStatic:
-      "EXT:migrate_samples/Configuration/TypoScript":
-        templateUid: 1
-
+SysTemplate:
+  29e0f4f0-719f-4581-994f-a5c32c02eae7:
+    configuration:
+      templateUid: 99
+      mode: append # append is default
+    data:
+      constants: '# TypoScript Constants from migrate_samples'
+      setup: '# TypoScript Setup from migrate_samples'
+      includeStatic: EXT:migrate_samples/Configuration/TypoScript
+      #includeStatic: [ EXT:migrate_samples/Configuration/TypoScript, EXT:migrate_samples/Configuration/TypoScript ]
 
 
 ########################################
 #
 #
 
-Configuration:
+PageTsConfig:
+  c3d47657-deb4-4d96-a79a-49133304ddc5:
+    configuration:
+      pageUid: 1
+    dataFile: TSConfig.ts
 
-  ExtensionConfiguration:
-    ExtensionsConfigurationForFoobarExtension.php:
+
+########################################
+#
+#
+
+ExtensionConfiguration:
+  99ec189e-0843-4abd-96f1-edba8c698d2e:
+    configuration:
       extensionKey: foobar
-#    ExtensionsConfigurationForFoobarExtension.txt:
-#      extensionKey: baz
+    dataFile: ExtensionConfigurationForFoobarExtension.php
+  ba2cf63f-0b45-41df-8f98-51cc44e1ce28:
+    configuration:
+      extensionKey: migrate_samples
+    dataFile: ExtensionConfigurationForThisExtension.php
+
+
+########################################
+#
+#
+
+T3d:
+  d80db20c-6826-4c52-8aef-c2c6a9b50d08:
+    configuration:
+      forceAllUids: true
+      update: true
+      targetPid: 0
+      #bar: baz
+    dataFile: 998.t3d
+  e02ecb73-0114-4e24-8621-ef2b1a8b4cfe:
+    dataFile: Foo.t3d
+
+
+########################################
+#
+#
+
+Record:
+  2f54ed29-fd1a-4d37-9ee3-65fd6983e959:
+    data:
+      pages:
+        -
+          uid: 123
+          pid: 0
+          title: bat
+        -
+          uid: 124
+          pid: 123
+          title: man
+        -
+          uid: 125
+          pid: 123
+          title: pow
+
+      tt_content:
+        -
+          #uid: 4567
+          pid: 123
+        -
+          #uid: 56745
+          pid: 123
+
+      sys_template:
+        -
+          uid: 4567
+          pid: 123
+        -
+          uid: 4567
+          pid: 123
+
+        -
+          uid: 1
+          pid: 1
+          cruser_id: 2
+          title: 'root tmpl NEU'
+          sitetitle: ''
+          constants: <INCLUDE_TYPOSCRIPT: source="FILE:EXT:customer_config/Configuration/Sites/ExampleSite/TypoScript/Constants.ts">
+          config: <INCLUDE_TYPOSCRIPT: source="FILE:EXT:customer_config/Configuration/Sites/ExampleSite/TypoScript/Setup.ts">
+          description: >
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+            Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
+            natoque penatibus et magnis dis parturient montes,
+            nascetur ridiculus mus. Donec quam felis, ultricies nec,
+            pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+            Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
+            arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+            justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+            Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
+            Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+            Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
