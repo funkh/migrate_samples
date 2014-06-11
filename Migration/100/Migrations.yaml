@@ -34,7 +34,7 @@ TypoScript:
     Setup:
       Setup.ts:
         templateUid: 1
-        mode: overwrite
+        mode: append
     IncludeStatic:
       "EXT:migrate_samples/Configuration/TypoScript":
         templateUid: 1
