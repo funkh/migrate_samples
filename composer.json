@@ -11,6 +11,6 @@
 	],
 	"require": {
 		"enet/typo3-cms-installers": "1.0.*",
-		"enet/migrate": "0.1.*"
+		"enet/migrate": "1.0.*"
 	}
 }
